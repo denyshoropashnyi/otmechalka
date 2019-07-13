@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.contents__wrapper {
+  display: flex;
+  background: #6de1d3;
+  padding: 5px;
+}
+
+.content--responsive {
+  flex: 1;
+  background: #e05a3c;
+  padding: 5px;
+}
+
+.contents__wrapper--fixed {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content--fixed {
+  width: 160px;
+  background: #ad31e2;
+  margin: 0 5px;
+  padding: 5px;
+}
