@@ -5,6 +5,13 @@
   transition: all 0.2s ease-in-out;
 }
 
+a {
+  text-decoration: none;
+  font-style: italic;
+  color: #000;
+  cursor: pointer;
+}
+
 .table {
   border-collapse: collapse;
   margin: 5px;
@@ -13,8 +20,51 @@
 .table td,
 .table th {
   width: 20vw;
-  padding: 5px;
+  text-align: center;
   border: 1px solid rgba(128, 128, 128);
+  padding: 5px;
+}
+
+.table tr:hover {
+  background: rgba(128, 128, 128, 0.333);
+}
+
+.table--rebuilt {
+  width: 50%;
+  border: 1px solid rgba(128, 128, 128);
+  margin: 5px auto;
+}
+
+.table--rebuilt__client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.table--rebuilt__client td:nth-child(1) {
+  width: 100%;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.hideTable {
+  display: none;
+}
+
+.table__client--notice,
+.table--rebuilt__contacts--cancel {
+  cursor: pointer;
+}
+
+.table--rebuilt__contacts--cancel {
+  width: 40px;
+  border-radius: 5px;
+}
+
+.table__client--notice:hover,
+.table--rebuilt__contacts--cancel:hover {
+  background: rgba(0, 128, 0, 0.4);
 }
 
 @media screen and (max-width: 425px) {

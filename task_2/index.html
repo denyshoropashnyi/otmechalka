@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script async src="app.js"></script>
     <title>Task 2 - Horopashnyi</title>
 </head>
 
 <body>
-    <table class="table">
+    <table class="table" id="clientTable">
         <thead>
             <tr>
                 <th>ФИО</th>
@@ -23,36 +24,55 @@
         <tbody>
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Смородина Елена Александровна</td>
-                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380987658923">0987658923</a></td>
-                <td class="table__client--email" data-label="Email"><a
-                        href="mailto:alenasmorodina@gmail.com">alenasmorodina@gmail.com</a>
+                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380987658923"
+                        title="Click to call">0987658923</a></td>
+                <td class="table__client--email" data-label="Email"><a href="mailto:alenasmorodina@gmail.com"
+                        title="Click to email">alenasmorodina@gmail.com</a>
                 </td>
-                <td class="table__client--skype" data-label="Skype"><a
-                        href="skype:alenasmorodina?chat">alenasmorodina</a></td>
-                <td class="table__client--notice" data-label="Комментарий">Встреча завтра на 11:00.</td>
+                <td class="table__client--skype" data-label="Skype"><a href="skype:alenasmorodina?chat"
+                        title="Click to chat">alenasmorodina</a></td>
+                <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">Встреча
+                    завтра на 11:00.</td>
             </tr>
 
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Миланов Алексей Игоревич</td>
-                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380506123123">0506123123</a></td>
-                <td class="table__client--email" data-label="Email"><a
-                        href="mailto:milanovalex@ua.fm">milanovalex@ua.fm</a>
+                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380506123123"
+                        title="Click to call">0506123123</a></td>
+                <td class="table__client--email" data-label="Email"><a href="mailto:milanovalex@ua.fm"
+                        title="Click to email">milanovalex@ua.fm</a>
                 </td>
-                <td class="table__client--skype" data-label="Skype"><a href="skype:Milanovalex?chat">Milanovalex</a>
+                <td class="table__client--skype" data-label="Skype"><a href="skype:Milanovalex?chat"
+                        title="Click to chat">Milanovalex</a>
                 </td>
-                <td class="table__client--notice" data-label="Комментарий">Созвониться в пятницу 05.07.2019.</td>
+                <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">
+                    Созвониться в пятницу 05.07.2019.</td>
             </tr>
 
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Зайченко Валентина Александровна</td>
-                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380966671290">0966671290</a></td>
-                <td class="table__client--email" data-label="Email"><a
-                        href="mailto:zay4enkovalya@mail.ru">zay4enkovalya@mail.ru</a>
+                <td class="table__client--phone" data-label="Телефон"><a href="tel:+380966671290"
+                        title="Click to call">0966671290</a></td>
+                <td class="table__client--email" data-label="Email"><a href="mailto:zay4enkovalya@mail.ru"
+                        title="Click to email">zay4enkovalya@mail.ru</a>
                 </td>
-                <td class="table__client--skype" data-label="Skype"><a href="skype:zay4enkovalya?chat">zay4enkovalya</a>
+                <td class="table__client--skype" data-label="Skype"><a href="skype:zay4enkovalya?chat"
+                        title="Click to chat">zay4enkovalya</a>
                 </td>
-                <td class="table__client--notice" data-label="Комментарий">Очень занят в ближайшие 2 недели.<br>
+                <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">Очень
+                    занят в ближайшие 2 недели.<br>
                     10.05.2019.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table--rebuilt hideTable" id="contactTemplate">
+        <tbody>
+            <tr class="table--rebuilt__client" id="contactTemplateRow">
+                <td class="table--rebuilt__contacts--name"></td>
+                <td class="table--rebuilt__contacts--phone"></td>
+                <td class="table--rebuilt__contacts--email"></td>
+                <td><button class="table--rebuilt__contacts--cancel" title="Click to full view">X</button></td>
             </tr>
         </tbody>
     </table>
@@ -60,6 +80,10 @@
 </body>
 
 </html>
+
+<!-- <table type="text/template" class="table--rebuilt"> -->
+<!-- </table> -->
+
 
 <!-- <td rowspan="3"> Добавлен: 21.05.2018 <br>
                     Возраст: 23 <br>
