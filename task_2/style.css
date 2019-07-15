@@ -131,3 +131,11 @@ ul {
     text-transform: uppercase;
   }
 }
+
+.table--rebuilt__contacts--rectangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 20px;
+  border-color: transparent transparent transparent  #15ff00;
+}
