@@ -27,9 +27,9 @@ function addContactRow() {
         contactTemplate.innerHTML += contactTemplateRow[i];
         contactTemplate.appendChild(contactTemplateRow);
 
-        rebuiltClientName[i].innerHTML = clientName[i].textContent;
-        rebuiltClientPhone[i].innerHTML = clientPhone[i].textContent;
-        rebuiltClientEmail[i].innerHTML = clientEmail[i].textContent;
+        rebuiltClientName[i].innerHTML = clientName[i].innerHTML;
+        rebuiltClientPhone[i].innerHTML = clientPhone[i].innerHTML;
+        rebuiltClientEmail[i].innerHTML = clientEmail[i].innerHTML;
     }
 }
 
