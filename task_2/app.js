@@ -5,6 +5,7 @@ const clientName = document.getElementsByClassName('table__client--name');
 const clientPhone = document.getElementsByClassName('table__client--phone');
 const clientEmail = document.getElementsByClassName('table__client--email');
 const clientNotice = document.getElementsByClassName('table__client--notice');
+const clientInfo = document.getElementsByClassName('table__client--info');
 
 const contactTemplate = document.getElementById('contactTemplate');
 const contactTemplateRow = document.getElementById('contactTemplateRow');
@@ -12,6 +13,10 @@ const rebuiltClientName = document.getElementsByClassName('table--rebuilt__conta
 const rebuiltClientPhone = document.getElementsByClassName('table--rebuilt__contacts--phone');
 const rebuiltClientEmail = document.getElementsByClassName('table--rebuilt__contacts--email');
 const rebuiltCancel = document.getElementsByClassName('table--rebuilt__contacts--cancel');
+const rebuiltClientInfo = document.getElementsByClassName('table--rebuilt__contacts--info');
+
+const contactInfo = document.getElementById('contactInfo');
+const closeInfoBtn = document.getElementById('closeInfo');
 
 
 init();
@@ -30,6 +35,8 @@ function addContactRow() {
         rebuiltClientName[i].innerHTML = clientName[i].innerHTML;
         rebuiltClientPhone[i].innerHTML = clientPhone[i].innerHTML;
         rebuiltClientEmail[i].innerHTML = clientEmail[i].innerHTML;
+
+        rebuiltClientInfo[0].innerHTML = clientInfo[1].innerHTML;
     }
 }
 
@@ -37,6 +44,8 @@ function addContactRow() {
 function addEventListeners() {
     onClientNoticeClick();
     onCancelViewBtnClick();
+    onClientNameClick();
+    onCloseInfoClick();
 }
 
 
@@ -63,7 +72,28 @@ function cancelChangeTableView() {
     }
 }
 
+function onClientNameClick() {
+    document.addEventListener('click', showMoreInfo);
+}
 
+function showMoreInfo() {
+    if (event.target.classList.contains('table--rebuilt__contacts--name')) {
+        // contactTemplate.classList.toggle('hideTable');
+        // event.stopPropagation();
+        contactInfo.classList.remove('hideTable');
+    }
+}
+
+
+function onCloseInfoClick() {
+    closeInfoBtn.addEventListener('click', closeInfo);
+}
+
+function closeInfo() {
+    contactInfo.classList.add('hideTable');
+    clientTable.classList.toggle('hideTable');
+    contactTemplate.classList.toggle('hideTable');
+}
 
 
 
