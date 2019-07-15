@@ -25,20 +25,24 @@
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Смородина Елена Александровна</td>
                 <td class="table__client--phone" data-label="Телефон"><a href="tel:+380987658923"
-                        title="Click to call">0987658923</a></td>
+                        title="Click to call">0987658923</a>
+                </td>
                 <td class="table__client--email" data-label="Email"><a href="mailto:alenasmorodina@gmail.com"
                         title="Click to email">alenasmorodina@gmail.com</a>
                 </td>
                 <td class="table__client--skype" data-label="Skype"><a href="skype:alenasmorodina?chat"
-                        title="Click to chat">alenasmorodina</a></td>
+                        title="Click to chat">alenasmorodina</a>
+                </td>
                 <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">Встреча
-                    завтра на 11:00.</td>
+                    завтра на 11:00.
+                </td>
             </tr>
 
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Миланов Алексей Игоревич</td>
                 <td class="table__client--phone" data-label="Телефон"><a href="tel:+380506123123"
-                        title="Click to call">0506123123</a></td>
+                        title="Click to call">0506123123</a>
+                </td>
                 <td class="table__client--email" data-label="Email"><a href="mailto:milanovalex@ua.fm"
                         title="Click to email">milanovalex@ua.fm</a>
                 </td>
@@ -46,13 +50,15 @@
                         title="Click to chat">Milanovalex</a>
                 </td>
                 <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">
-                    Созвониться в пятницу 05.07.2019.</td>
+                    Созвониться в пятницу 05.07.2019.
+                </td>
             </tr>
 
             <tr class="table__client">
                 <td class="table__client--name" data-label="ФИО">Зайченко Валентина Александровна</td>
                 <td class="table__client--phone" data-label="Телефон"><a href="tel:+380966671290"
-                        title="Click to call">0966671290</a></td>
+                        title="Click to call">0966671290</a>
+                </td>
                 <td class="table__client--email" data-label="Email"><a href="mailto:zay4enkovalya@mail.ru"
                         title="Click to email">zay4enkovalya@mail.ru</a>
                 </td>
@@ -60,35 +66,65 @@
                         title="Click to chat">zay4enkovalya</a>
                 </td>
                 <td class="table__client--notice" data-label="Комментарий" title="Click to compact view">Очень
-                    занят в ближайшие 2 недели.<br>
-                    10.05.2019.</td>
+                    занят в ближайшие 2 недели.<br>10.05.2019.
+                </td>
             </tr>
         </tbody>
     </table>
 
-    <table class="table--rebuilt " id="contactTemplate">
-        <!-- hideTable -->
-        <tbody>
-            <tr class="table--rebuilt__client" id="contactTemplateRow">
-                <td class="table--rebuilt__contacts--name"></td>
-                <td class="table--rebuilt__contacts--phone"></td>
-                <td class="table--rebuilt__contacts--email"></td>
-                <td><button class="table--rebuilt__contacts--cancel" title="Click to full view">Back</button></td>
+    <div class="table--rebuilt__wrap">
+        <table class="table--rebuilt hideTable" id="contactTemplate">
+            <tbody class="table--rebuilt__client" id="contactTemplateRow">
+                <tr>
+                    <td class="table--rebuilt__contacts--name"></td>
+                    <td class="table--rebuilt__contacts--phone"></td>
+                    <td class="table--rebuilt__contacts--email"></td>
+                    <td><button class="table--rebuilt__contacts--cancel" title="Click to full view">Back</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="contactInfo" class="hideTable">
+            <tr>
+                <td class="table--rebuilt__contacts--info"></td>
+                <td class="table--rebuilt__contacts--exit" id="closeInfo">X</td>
             </tr>
-        </tbody>
-    </table>
+        </table>
+    </div>
 
+    <table class="hideTable">
+        <tr>
+            <td class="table__client--info">
+                <ul>
+                    <li>Добавлен: 21.05.2018</li>
+                    <li>Возраст: 27</li>
+                    <li>Семейное положение: холост.</li>
+                    <li>Работает: Фора, кассир.</li>
+                    <li>Образование: высшее, НТУУ КПИ.</li>
+                    <li>Финансы и кредит.</li>
+                </ul>
+            </td>
+            <td class="table__client--info">
+                <ul>
+                    <li>Добавлен: 16.07.2019</li>
+                    <li>Возраст: 27</li>
+                    <li>Семейное положение: холост.</li>
+                    <li>Работает: Подводспецстрой, инженер.</li>
+                    <li>Образование: высшее, ДИИТ.</li>
+                    <li>Промышленное и гражданское строительство.</li>
+                </ul>
+            </td>
+            <td class="table__client--info">
+                <ul>
+                    <li>Добавлен: 21.05.2016</li>
+                    <li>Возраст: 29</li>
+                    <li>Семейное положение: замужем.</li>
+                    <li>Работает: Хогвартс, зауч.</li>
+                    <li>Образование: высшее, Ховартс.</li>
+                    <li>Зельеварение.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
-
-<!-- <table type="text/template" class="table--rebuilt"> -->
-<!-- </table> -->
-
-
-<!-- <td rowspan="3"> Добавлен: 21.05.2018 <br>
-                    Возраст: 23 <br>
-                    Семейное положение: холост. <br>
-                    Работает: Фора, кассир. <br>
-                    Образование: высшее, НТУУ КПИ. <br>
-                    Финансы и кредит. </td> -->
