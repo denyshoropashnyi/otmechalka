@@ -4,11 +4,11 @@ const clientTable = document.getElementById('clientTable');
 const clientName = document.getElementsByClassName('table__client--name');
 const clientPhone = document.getElementsByClassName('table__client--phone');
 const clientEmail = document.getElementsByClassName('table__client--email');
-const clientNotice = document.getElementsByClassName('table__client--notice');
 const clientInfo = document.getElementsByClassName('table__client--info');
 
 const contactTemplate = document.getElementById('contactTemplate');
 const contactTemplateRow = document.getElementById('contactTemplateRow');
+const rebuiltTable = document.getElementById('rebuiltTable');
 const rebuiltClientName = document.getElementsByClassName('table--rebuilt__contacts--name');
 const rebuiltClientPhone = document.getElementsByClassName('table--rebuilt__contacts--phone');
 const rebuiltClientEmail = document.getElementsByClassName('table--rebuilt__contacts--email');
@@ -17,6 +17,8 @@ const rebuiltClientInfo = document.getElementsByClassName('table--rebuilt__conta
 
 const contactInfo = document.getElementById('contactInfo');
 const closeInfoBtn = document.getElementById('closeInfo');
+
+console.log(rebuiltClientInfo);
 
 
 init();
@@ -29,17 +31,16 @@ function init() {
 
 function addContactRow() {
     for (let i = 0; i < clientName.length; i++) {
-        contactTemplate.innerHTML += contactTemplateRow[i];
         contactTemplate.appendChild(contactTemplateRow);
+        contactTemplate.innerHTML += contactTemplateRow[i];
 
         rebuiltClientName[i].innerHTML = clientName[i].innerHTML;
         rebuiltClientPhone[i].innerHTML = clientPhone[i].innerHTML;
         rebuiltClientEmail[i].innerHTML = clientEmail[i].innerHTML;
 
-        rebuiltClientInfo[0].innerHTML = clientInfo[1].innerHTML;
+        rebuiltClientInfo[i].innerHTML = clientInfo[i].innerHTML;
     }
 }
-
 
 function addEventListeners() {
     onClientNoticeClick();
@@ -55,8 +56,8 @@ function onClientNoticeClick() {
 
 function changeTableView() {
     if (event.target.classList.contains('table__client--notice')) {
-        contactTemplate.classList.toggle('hideTable');
         clientTable.classList.toggle('hideTable');
+        rebuiltTable.classList.toggle('hideTable');
     }
 }
 
@@ -67,20 +68,24 @@ function onCancelViewBtnClick() {
 
 function cancelChangeTableView() {
     if (event.target.classList.contains('table--rebuilt__contacts--cancel')) {
+        rebuiltTable.classList.toggle('hideTable');
         clientTable.classList.toggle('hideTable');
-        contactTemplate.classList.toggle('hideTable');
     }
 }
 
+
 function onClientNameClick() {
-    document.addEventListener('click', showMoreInfo);
+    rebuiltTable.addEventListener('click', showMoreInfo);
 }
 
 function showMoreInfo() {
     if (event.target.classList.contains('table--rebuilt__contacts--name')) {
-        // contactTemplate.classList.toggle('hideTable');
-        // event.stopPropagation();
         contactInfo.classList.remove('hideTable');
+        for (let i = 0; i < clientName.length; i++) {
+            rebuiltCancel[i].classList.add('hideTable');
+            rebuiltClientInfo[i].classList.add('hideTable')
+        }
+        event.target.parentNode.children[4].classList.toggle('hideTable');
     }
 }
 
@@ -91,40 +96,10 @@ function onCloseInfoClick() {
 
 function closeInfo() {
     contactInfo.classList.add('hideTable');
+    rebuiltTable.classList.toggle('hideTable')
     clientTable.classList.toggle('hideTable');
-    contactTemplate.classList.toggle('hideTable');
+    for (let i = 0; i < clientName.length; i++) {
+        rebuiltCancel[i].classList.remove('hideTable');
+        rebuiltClientInfo[i].classList.add('hideTable')
+    }
 }
-
-
-
-
-
-
-
-
-// const clientNotice = document.getElementsByClassName('table__client--notice');
-// const clientName = document.getElementsByClassName('table__client--name');
-
-// const contactTemplate = document.getElementById('contactTemplate').innerHTML;
-
-
-// function onClientNoticeClick() {
-//     console.log(clientName[0]);
-// }
-
-// contactTemplateName.innerHTML = clientName[2].textContent;
-
-// // contactTemplate.appendChild(contactTemplate);
-
-// // console.log(contactTemplateRow);
-
-// const contactTr = document.createElement('tr');
-// contactTr.innerHTML = contactTemplate;
-// contactsList.appendChild(contactTr);
-
-// for (let i = 0; i < 5; i++) {
-//     let ros = contactsList.insertRow(i);
-//     ros.innerHTML = contactTemplateRow[i];
-//     ros.innerHTML = contactTemplateRow[i];
-//     console.log(ros);
-// }

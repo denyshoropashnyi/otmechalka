@@ -73,57 +73,64 @@
     </table>
 
     <div class="table--rebuilt__wrap">
-        <table class="table--rebuilt hideTable" id="contactTemplate">
-            <tbody class="table--rebuilt__client" id="contactTemplateRow">
-                <tr>
+        <table class="table--rebuilt hideTable" id="rebuiltTable">
+            <tbody class="table--rebuilt__client" id="contactTemplate">
+                <tr id="contactTemplateRow">
                     <td class="table--rebuilt__contacts--name"></td>
                     <td class="table--rebuilt__contacts--phone"></td>
                     <td class="table--rebuilt__contacts--email"></td>
                     <td><button class="table--rebuilt__contacts--cancel" title="Click to full view">Back</button></td>
+                    <td class="table--rebuilt__contacts--info hideTable"></td>
                 </tr>
             </tbody>
         </table>
         <table id="contactInfo" class="hideTable">
-            <tr>
-                <td class="table--rebuilt__contacts--info"></td>
-                <td class="table--rebuilt__contacts--exit" id="closeInfo">X</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td class="table--rebuilt__contacts--exit" id="closeInfo">X</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
     <table class="hideTable">
-        <tr>
-            <td class="table__client--info">
-                <ul>
-                    <li>Добавлен: 21.05.2018</li>
-                    <li>Возраст: 27</li>
-                    <li>Семейное положение: холост.</li>
-                    <li>Работает: Фора, кассир.</li>
-                    <li>Образование: высшее, НТУУ КПИ.</li>
-                    <li>Финансы и кредит.</li>
-                </ul>
-            </td>
-            <td class="table__client--info">
-                <ul>
-                    <li>Добавлен: 16.07.2019</li>
-                    <li>Возраст: 27</li>
-                    <li>Семейное положение: холост.</li>
-                    <li>Работает: Подводспецстрой, инженер.</li>
-                    <li>Образование: высшее, ДИИТ.</li>
-                    <li>Промышленное и гражданское строительство.</li>
-                </ul>
-            </td>
-            <td class="table__client--info">
-                <ul>
-                    <li>Добавлен: 21.05.2016</li>
-                    <li>Возраст: 29</li>
-                    <li>Семейное положение: замужем.</li>
-                    <li>Работает: Хогвартс, зауч.</li>
-                    <li>Образование: высшее, Ховартс.</li>
-                    <li>Зельеварение.</li>
-                </ul>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td class="table__client--info">
+                    <ul>
+                        <li>Добавлен: 21.05.2018</li>
+                        <li>Возраст: 27</li>
+                        <li>Семейное положение: холост.</li>
+                        <li class="table--rebuilt__contacts--rectangle"></li>
+                        <li>Работает: Фора, кассир.</li>
+                        <li>Образование: высшее, НТУУ КПИ.</li>
+                        <li>Финансы и кредит.</li>
+                    </ul>
+                </td>
+                <td class="table__client--info">
+                    <ul>
+                        <li>Добавлен: 16.07.2019</li>
+                        <li>Возраст: 27</li>
+                        <li>Семейное положение: холост.</li>
+                        <li class="table--rebuilt__contacts--rectangle"></li>
+                        <li>Работает: Подводспецстрой, инженер.</li>
+                        <li>Образование: высшее, ДИИТ.</li>
+                        <li>Промышленное и гражданское строительство.</li>
+                    </ul>
+                </td>
+                <td class="table__client--info">
+                    <ul>
+                        <li>Добавлен: 21.05.2016</li>
+                        <li>Возраст: 29</li>
+                        <li>Семейное положение: замужем.</li>
+                        <li class="table--rebuilt__contacts--rectangle"></li>
+                        <li>Работает: Хогвартс, зауч.</li>
+                        <li>Образование: высшее, Ховартс.</li>
+                        <li>Зельеварение.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </body>
 

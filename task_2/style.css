@@ -8,7 +8,7 @@
 a {
   text-decoration: none;
   font-style: italic;
-  color: #000;
+  color: #020;
   cursor: pointer;
 }
 
@@ -25,18 +25,17 @@ ul {
 .table th {
   width: 20vw;
   text-align: center;
-  border: 1px solid rgba(128, 128, 128);
+  border: 1px solid #da774b;
   padding: 5px;
 }
 
 .table tr:hover,
 .table--rebuilt tr:hover {
-  background: rgba(128, 128, 128, 0.333);
+  background: #46aace;
 }
 
 .table--rebuilt {
-  /* width: 60vw; */
-  border: 1px solid rgba(128, 128, 128);
+  border: 1px solid #b93860;
   padding: 5px;
 }
 
@@ -56,7 +55,7 @@ ul {
 }
 
 .table--rebuilt__client td:nth-child(1):hover {
-  color: red;
+  color: #ffffff;
 }
 
 .hideTable {
@@ -75,12 +74,11 @@ ul {
 
 .table__client--notice:hover,
 .table--rebuilt__contacts--cancel:hover {
-  background: rgba(0, 128, 0, 0.4);
+  background: #9e9c3f;
 }
 
 .table--rebuilt__contacts--info {
-  border: 1px solid rgba(128, 128, 128);
-  border-left: none;
+  border: 1px solid #eb2005;
   padding: 5px;
 }
 
@@ -100,7 +98,15 @@ ul {
 }
 
 .table--rebuilt__contacts--exit:hover {
-  color: red;
+  color: #be0f4d;
+}
+
+.table--rebuilt__contacts--rectangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 40px;
+  border-color: transparent transparent transparent #023f32;
 }
 
 @media screen and (max-width: 425px) {
@@ -130,12 +136,4 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
   }
-}
-
-.table--rebuilt__contacts--rectangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 0 5px 20px;
-  border-color: transparent transparent transparent  #15ff00;
 }
