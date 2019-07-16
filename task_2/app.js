@@ -18,8 +18,6 @@ const rebuiltClientInfo = document.getElementsByClassName('table--rebuilt__conta
 const contactInfo = document.getElementById('contactInfo');
 const closeInfoBtn = document.getElementById('closeInfo');
 
-console.log(rebuiltClientInfo);
-
 
 init();
 
@@ -32,7 +30,7 @@ function init() {
 function addContactRow() {
     for (let i = 0; i < clientName.length; i++) {
         contactTemplate.appendChild(contactTemplateRow);
-        contactTemplate.innerHTML += contactTemplateRow[i];
+        contactTemplate.innerHTML += contactTemplateRow;
 
         rebuiltClientName[i].innerHTML = clientName[i].innerHTML;
         rebuiltClientPhone[i].innerHTML = clientPhone[i].innerHTML;
